@@ -1,0 +1,47 @@
+---
+title: 颜色
+description: 品牌色、语义色和对比度规则
+---
+
+import ColorSwatch from '../../../components/ColorSwatch.astro';
+import ContrastBadge from '../../../components/ContrastBadge.astro';
+
+## 核心颜色
+
+<div class="brand-grid">
+  <ColorSwatch name="Brand Blue 700" value="#055088" usage="主按钮、链接、Logo 主体" dark />
+  <ColorSwatch name="Ink Navy" value="#0B1F33" usage="正文和深色背景" dark />
+  <ColorSwatch name="Mint 400" value="#6ADFA3" usage="品牌节点和小面积活力色" />
+  <ColorSwatch name="Soft Blue" value="#9FC1F9" usage="深色主题链接、图表和插图" />
+  <ColorSwatch name="Canvas" value="#F7FAFC" usage="亮色页面背景" />
+  <ColorSwatch name="Border" value="#D7E2EA" usage="边框和分隔线" />
+</div>
+
+## 使用比例
+
+页面整体配色以中性色和充足留白为主基调。Brand Blue 主要承载关键动作指引、当前高亮状态与链接跳转；Mint 则严格限用于特定节点、高亮装饰或状态提示背景。在单一视口中，通常只允许存在一个实心品牌蓝样式的核心操作按钮。
+
+## 可访问组合
+
+<div class="brand-grid">
+  <ContrastBadge foreground="#FFFFFF" background="#055088" label="白字品牌蓝按钮" />
+  <ContrastBadge foreground="#0B1F33" background="#6ADFA3" label="深色字薄荷绿标签" />
+  <ContrastBadge foreground="#0B1F33" background="#9FC1F9" label="深色字浅蓝底" />
+  <ContrastBadge
+    foreground="#FFFFFF"
+    background="#6ADFA3"
+    label="避免搭配白字薄荷绿底（对比度不足）"
+  />
+</div>
+
+## 语义色
+
+成功、警告、错误和信息等系统提示，必须遵循本规范定义的对应语义色。除色彩变化外，还需结合图标、标题或状态文本辅助展示。不可仅因为 Mint 在感官上呈现绿色，就将其直接用于所有表单或操作的成功状态指示。
+
+## 亮暗主题
+
+组件开发应按用途选用语义色，而非直接套用原始色阶。亮色主题下的主操作按钮使用 Brand Blue；暗色主题下的主操作按钮则采用 Soft Blue 配 Ink Navy 文本。插图、Logo 以及状态色均需在亮暗双重主题下进行单独视觉复核，避免进行粗暴的反相处理。
+
+## 渐变
+
+渐变配色仅适用于仓库封面、社交分享图以及大面积品牌插画。交互按钮、表单输入框、数据表格和状态标签等基础元素均不使用渐变样式。推荐采用品牌标准渐变：`#055088 → #325093 → #6ADFA3`，在视觉排版中薄荷绿端可超出画布边界，以防止亮绿色占比过高破坏克制感。

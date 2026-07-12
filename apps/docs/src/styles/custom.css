@@ -1,0 +1,168 @@
+/* Site-local visual variables. These are implementation details of the documentation site. */
+:root {
+  --cqut-color-blue-100: #dceef5;
+  --cqut-color-blue-700: #055088;
+  --cqut-color-blue-900: #0b3658;
+  --cqut-color-blue-950: #071f33;
+  --cqut-color-mint-400: #6adfa3;
+  --cqut-color-neutral-0: #ffffff;
+  --cqut-color-neutral-50: #f7fafc;
+  --cqut-color-neutral-100: #edf2f6;
+  --cqut-color-neutral-200: #d7e2ea;
+  --cqut-color-neutral-300: #b5c5d1;
+  --cqut-color-neutral-400: #8297a6;
+  --cqut-color-neutral-600: #526577;
+  --cqut-color-neutral-700: #3d4e5d;
+  --cqut-color-neutral-800: #243646;
+  --cqut-color-neutral-900: #0b1f33;
+  --cqut-color-soft-blue: #9fc1f9;
+  --cqut-space-1: 4px;
+  --cqut-space-2: 8px;
+  --cqut-space-3: 12px;
+  --cqut-space-4: 16px;
+  --cqut-space-6: 24px;
+  --cqut-space-8: 32px;
+  --cqut-space-12: 48px;
+  --cqut-space-16: 64px;
+  --cqut-radius-small: 6px;
+  --cqut-radius-control: 8px;
+  --cqut-radius-card: 12px;
+  --cqut-radius-large: 16px;
+  --cqut-radius-round: 999px;
+  --cqut-duration-fast: 150ms;
+  --cqut-font-family-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Noto Sans CJK SC',
+    'Microsoft YaHei', sans-serif;
+  --cqut-font-family-mono: SFMono-Regular, 'Cascadia Code', 'JetBrains Mono', Consolas, monospace;
+  --cqut-semantic-color-background-canvas: #f7fafc;
+  --cqut-semantic-color-background-surface: #ffffff;
+  --cqut-semantic-color-background-subtle: #f0f7fa;
+  --cqut-semantic-color-text-primary: #0b1f33;
+  --cqut-semantic-color-text-secondary: #526577;
+  --cqut-semantic-color-text-link: #055088;
+  --cqut-semantic-color-border-default: #d7e2ea;
+  --cqut-semantic-color-border-strong: #8297a6;
+  --cqut-semantic-color-action-primary: #055088;
+  --cqut-semantic-color-action-primary-hover: #0b416b;
+  --cqut-semantic-color-action-primary-text: #ffffff;
+  --cqut-semantic-color-action-focus: #6adfa3;
+  --cqut-semantic-color-status-success: #1e714f;
+  --cqut-semantic-color-status-danger: #b42318;
+}
+
+[data-theme='dark'] {
+  --cqut-semantic-color-background-canvas: #071f33;
+  --cqut-semantic-color-background-surface: #0b1f33;
+  --cqut-semantic-color-background-subtle: #0b3658;
+  --cqut-semantic-color-text-primary: #f7fafc;
+  --cqut-semantic-color-text-secondary: #b5c5d1;
+  --cqut-semantic-color-text-link: #9fc1f9;
+  --cqut-semantic-color-border-default: #3d4e5d;
+  --cqut-semantic-color-border-strong: #607787;
+  --cqut-semantic-color-action-primary: #9fc1f9;
+  --cqut-semantic-color-action-primary-hover: #b8dceb;
+  --cqut-semantic-color-action-primary-text: #0b1f33;
+  --cqut-semantic-color-status-success: #8be4bb;
+  --cqut-semantic-color-status-danger: #ffaaa3;
+}
+
+:root {
+  font-family: var(--cqut-font-family-sans);
+  --sl-font: var(--cqut-font-family-sans);
+  --sl-font-mono: var(--cqut-font-family-mono);
+  --sl-color-accent-low: var(--cqut-color-blue-900);
+  --sl-color-accent: var(--cqut-color-soft-blue);
+  --sl-color-accent-high: var(--cqut-color-blue-100);
+  --sl-color-white: var(--cqut-color-neutral-50);
+  --sl-color-gray-1: var(--cqut-color-neutral-100);
+  --sl-color-gray-2: var(--cqut-color-neutral-300);
+  --sl-color-gray-3: var(--cqut-color-neutral-400);
+  --sl-color-gray-4: var(--cqut-color-neutral-600);
+  --sl-color-gray-5: var(--cqut-color-neutral-700);
+  --sl-color-gray-6: var(--cqut-color-neutral-900);
+  --sl-color-black: var(--cqut-color-blue-950);
+  --sl-content-width: 54rem;
+  --sl-sidebar-width: 18rem;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: var(--cqut-color-blue-100);
+  --sl-color-accent: var(--cqut-color-blue-700);
+  --sl-color-accent-high: var(--cqut-color-blue-950);
+  --sl-color-white: var(--cqut-color-neutral-900);
+  --sl-color-gray-1: var(--cqut-color-neutral-800);
+  --sl-color-gray-2: var(--cqut-color-neutral-700);
+  --sl-color-gray-3: var(--cqut-color-neutral-600);
+  --sl-color-gray-4: var(--cqut-color-neutral-400);
+  --sl-color-gray-5: var(--cqut-color-neutral-200);
+  --sl-color-gray-6: var(--cqut-color-neutral-100);
+  --sl-color-black: var(--cqut-color-neutral-0);
+}
+
+html {
+  background: var(--cqut-semantic-color-background-canvas);
+  color: var(--cqut-semantic-color-text-primary);
+}
+
+body {
+  line-height: 1.6;
+}
+
+.site-title img {
+  width: auto;
+  height: 2.25rem;
+}
+
+main:has(#brand-hero-title) > .content-panel:has(#_top) {
+  display: none;
+}
+
+.sl-markdown-content h2 {
+  border-bottom: 1px solid var(--cqut-semantic-color-border-default);
+  padding-bottom: 0.45rem;
+}
+
+.sl-markdown-content a:not([class]) {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.sl-markdown-content :is(code, kbd) {
+  font-family: var(--cqut-font-family-mono);
+}
+
+.sl-markdown-content pre {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cqut-semantic-color-action-focus);
+  outline-offset: 3px;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--cqut-space-4);
+  margin-block: var(--cqut-space-6);
+}
+
+.brand-grid > * {
+  margin-top: 0;
+}
+
+.rule-list li + li {
+  margin-top: var(--cqut-space-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

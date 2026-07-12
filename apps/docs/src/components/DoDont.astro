@@ -1,0 +1,29 @@
+---
+interface Props {
+  kind: 'do' | 'dont';
+  title: string;
+}
+const { kind, title } = Astro.props;
+---
+
+<aside class:list={['example', kind]}>
+  <strong>{kind === 'do' ? '推荐' : '避免'} · {title}</strong>
+  <div class="body"><slot /></div>
+</aside>
+<style>
+  .example {
+    border-inline-start: 4px solid;
+    border-radius: var(--cqut-radius-control);
+    background: var(--cqut-semantic-color-background-surface);
+    padding: var(--cqut-space-4);
+  }
+  .do {
+    border-color: var(--cqut-semantic-color-status-success);
+  }
+  .dont {
+    border-color: var(--cqut-semantic-color-status-danger);
+  }
+  .body :global(p:last-child) {
+    margin-bottom: 0;
+  }
+</style>

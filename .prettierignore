@@ -1,0 +1,9 @@
+node_modules
+pnpm-lock.yaml
+apps/docs/.astro
+apps/docs/dist
+apps/docs/public/downloads
+assets/logo/export
+assets/templates/export
+playwright-report
+test-results

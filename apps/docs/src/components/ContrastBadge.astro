@@ -1,0 +1,69 @@
+---
+import { contrast } from '../contrast';
+
+interface Props {
+  foreground: string;
+  background: string;
+  label: string;
+}
+const { foreground, background, label } = Astro.props;
+const ratio = contrast(foreground, background);
+const passes = ratio >= 4.5;
+---
+
+<div class:list={['contrast', { passes }]} style={`--fg:${foreground};--bg:${background}`}>
+  <span class="combination" aria-hidden="true"><span></span></span>
+  <span class="preview">{label}</span>
+  <span class:list={['result', { passes }]}
+    >{ratio.toFixed(2)}:1 · {passes ? 'AA 通过' : '仅限大字/图形'}</span
+  >
+</div>
+<style>
+  .contrast {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--cqut-space-4);
+    border: 1px solid var(--cqut-semantic-color-border-default);
+    border-radius: var(--cqut-radius-control);
+    background: var(--cqut-semantic-color-background-surface);
+    color: var(--cqut-semantic-color-text-primary);
+    padding: var(--cqut-space-4);
+  }
+  .contrast.passes {
+    background: var(--bg);
+    color: var(--fg);
+  }
+  .combination {
+    display: inline-flex;
+    width: 2.5rem;
+    height: 1.75rem;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cqut-semantic-color-border-strong);
+    border-radius: var(--cqut-radius-small);
+    background: var(--bg);
+  }
+  .combination span {
+    width: var(--cqut-space-6);
+    height: var(--cqut-space-1);
+    border-radius: var(--cqut-radius-round);
+    background: var(--fg);
+  }
+  .preview {
+    flex: 1 1 10rem;
+    font-weight: 700;
+  }
+  .result {
+    border-radius: var(--cqut-radius-round);
+    background: rgb(11 31 51 / 75%);
+    color: white;
+    padding: var(--cqut-space-1) var(--cqut-space-2);
+    font-size: 0.78rem;
+  }
+  .result.passes {
+    background: #1e714f;
+  }
+</style>

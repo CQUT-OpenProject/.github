@@ -1,0 +1,107 @@
+---
+title: 下载
+description: 获取标志、图标、模板和历史资产
+---
+
+import DownloadCard from '../../../components/DownloadCard.astro';
+
+所有标志图形均以 `assets/logo/source/*.svg` 作为唯一的源文件。PNG 格式导出图、规范网站下载目录及清单配置均通过脚本命令自动生成，严禁手动直接修改导出物。
+
+## 标志
+
+<div class="brand-grid">
+  <DownloadCard
+    title="彩色长条标志"
+    description="主要品牌标志，带竖分割线及非官方声明"
+    format="SVG"
+    href="downloads/logo/logo-color.svg"
+  />
+  <DownloadCard
+    title="深色单色长条"
+    description="适合浅色或单色印刷的长条组合"
+    format="SVG"
+    href="downloads/logo/logo-mono-dark.svg"
+  />
+  <DownloadCard
+    title="浅色单色长条"
+    description="适合深色背景的长条组合"
+    format="SVG"
+    href="downloads/logo/logo-mono-light.svg"
+  />
+  <DownloadCard
+    title="彩色方形标志"
+    description="原始 2x2 图标标志，透明背景"
+    format="SVG"
+    href="downloads/logo/mark-color.svg"
+  />
+  <DownloadCard
+    title="深色单色方形"
+    description="用于浅色或单色方形场景"
+    format="SVG"
+    href="downloads/logo/mark-mono-dark.svg"
+  />
+  <DownloadCard
+    title="浅色单色方形"
+    description="用于深色背景方形场景"
+    format="SVG"
+    href="downloads/logo/mark-mono-light.svg"
+  />
+  <DownloadCard
+    title="App 图标"
+    description="含浅色底板和规范安全区"
+    format="SVG"
+    href="downloads/logo/app-icon.svg"
+  />
+  <DownloadCard
+    title="512 px App 图标"
+    description="软件商店与仓库头像常用尺寸"
+    format="PNG"
+    href="downloads/logo/app-icon-512.png"
+  />
+  <DownloadCard
+    title="32 px favicon"
+    description="浏览器和小尺寸入口"
+    format="PNG"
+    href="downloads/logo/mark-color-32.png"
+  />
+</div>
+
+## 模板
+
+<div class="brand-grid">
+  <DownloadCard
+    title="仓库封面"
+    description="1280×640，可替换项目名和说明"
+    format="SVG"
+    href="downloads/templates/repository-cover.svg"
+  />
+  <DownloadCard
+    title="Open Graph 分享图"
+    description="1200×630，适合社交分享"
+    format="SVG"
+    href="downloads/templates/open-graph.svg"
+  />
+  <DownloadCard
+    title="项目状态卡"
+    description="维护中、实验性与归档状态"
+    format="SVG"
+    href="downloads/templates/project-status.svg"
+  />
+  <DownloadCard
+    title="横向签名"
+    description="标志、英文简称和中文全称"
+    format="SVG"
+    href="downloads/templates/horizontal-lockup.svg"
+  />
+</div>
+
+## 资产清单
+
+<div class="brand-grid">
+  <DownloadCard
+    title="资产构建清单"
+    description="记录尺寸、源文件和生成时间"
+    format="JSON"
+    href="downloads/manifest.json"
+  />
+</div>

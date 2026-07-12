@@ -1,0 +1,11 @@
+node_modules/
+.pnpm-store/
+.DS_Store
+*.log
+
+apps/docs/.astro/
+apps/docs/dist/
+apps/docs/public/downloads/
+test-results/
+playwright-report/
+coverage/

@@ -1,0 +1,143 @@
+---
+const base = import.meta.env.BASE_URL;
+const path = (value: string) => `${base}${value}`.replace(/\/+/g, '/');
+---
+
+<section class="hero" aria-labelledby="brand-hero-title">
+  <div class="copy">
+    <p class="eyebrow">CQUT-OSP DESIGN · 0.1.0</p>
+    <h1 id="brand-hero-title">为校园开源项目建立一致、可信、可访问的视觉语言</h1>
+    <p class="lead">
+      这是一套面向网站、移动应用、课程项目和社区传播的开放视觉规范。先共享原则与规范，再让组件从真实项目中生长。
+    </p>
+    <div class="actions">
+      <a class="primary" href={path('start/principles/')}>开始使用</a>
+      <a class="secondary" href={path('resources/downloads/')}>下载资源</a>
+    </div>
+  </div>
+  <div class="mark" role="img" aria-label="CQUT 四字母模块化标志示意">
+    <svg viewBox="0 0 128 128" role="img" aria-hidden="true">
+      <g
+        fill="none"
+        stroke="currentColor"
+        stroke-width="9"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M56 24a21 21 0 1 0 0 32"></path>
+        <circle cx="91" cy="40" r="21"></circle>
+        <path d="M21 76v18a18 18 0 0 0 36 0V76"></path>
+        <path d="M76 76h34M93 76v36"></path>
+      </g>
+      <circle class="node" cx="110" cy="59" r="5.5"></circle>
+    </svg>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(15rem, 0.55fr);
+    gap: clamp(2rem, 7vw, 6rem);
+    align-items: center;
+    overflow: hidden;
+    margin-block: var(--cqut-space-4) var(--cqut-space-12);
+    padding: clamp(var(--cqut-space-8), 6vw, 5rem);
+    border: 1px solid var(--cqut-semantic-color-border-default);
+    border-radius: var(--cqut-radius-large);
+    background:
+      radial-gradient(circle at 90% 10%, rgb(106 223 163 / 22%), transparent 34%),
+      linear-gradient(
+        135deg,
+        var(--cqut-semantic-color-background-surface),
+        var(--cqut-semantic-color-background-subtle)
+      );
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.16;
+    background-image: radial-gradient(var(--cqut-color-blue-700) 0.8px, transparent 0.8px);
+    background-size: 20px 20px;
+    mask-image: linear-gradient(90deg, transparent, black);
+  }
+  .copy,
+  .mark {
+    position: relative;
+    z-index: 1;
+  }
+  .eyebrow {
+    margin-bottom: var(--cqut-space-4);
+    color: var(--cqut-semantic-color-text-link);
+    font-family: var(--cqut-font-family-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+  h1 {
+    margin: 0;
+    color: var(--cqut-semantic-color-text-primary);
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.045em;
+  }
+  .lead {
+    max-width: 44rem;
+    margin-top: var(--cqut-space-6);
+    color: var(--cqut-semantic-color-text-secondary);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--cqut-space-3);
+    margin-top: var(--cqut-space-8);
+  }
+  .actions a {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--cqut-radius-control);
+    padding: var(--cqut-space-2) var(--cqut-space-4);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .primary {
+    background: var(--cqut-semantic-color-action-primary);
+    color: var(--cqut-semantic-color-action-primary-text);
+  }
+  .primary:hover {
+    background: var(--cqut-semantic-color-action-primary-hover);
+  }
+  .secondary {
+    border: 1px solid var(--cqut-semantic-color-border-strong);
+    color: var(--cqut-semantic-color-text-primary);
+    background: var(--cqut-semantic-color-background-surface);
+  }
+  .mark {
+    color: var(--cqut-color-blue-700);
+    filter: drop-shadow(0 20px 28px rgb(5 80 136 / 18%));
+  }
+  .mark svg {
+    display: block;
+    width: 100%;
+    max-width: 18rem;
+    margin-inline: auto;
+  }
+  .node {
+    fill: var(--cqut-color-mint-400);
+  }
+  @media (max-width: 46rem) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+    .mark {
+      order: -1;
+      width: 7rem;
+    }
+  }
+</style>

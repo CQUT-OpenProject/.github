@@ -1,0 +1,57 @@
+---
+title: CQUT-OSP Design
+description: 为校园开源项目构建统一、可信、无障碍的视觉语言
+template: splash
+sidebar:
+  hidden: true
+head:
+  - tag: meta
+    attrs:
+      property: og:title
+      content: CQUT-OSP Design
+  - tag: meta
+    attrs:
+      property: og:description
+      content: 为校园开源项目构建统一、可信、无障碍的视觉语言
+---
+
+import BrandHero from '../../components/BrandHero.astro';
+import ColorSwatch from '../../components/ColorSwatch.astro';
+
+<BrandHero />
+
+## 四项设计原则
+
+<div class="brand-grid">
+  <article>
+    <h3>可信</h3>
+    <p>信息层级清晰，状态和来源明确。涉及登录、认证与校内身份时，始终说明非官方性质。</p>
+  </article>
+  <article>
+    <h3>开放</h3>
+    <p>资产采用开放格式，规则允许复用，设计讨论可追踪；不让专有工具成为唯一入口。</p>
+  </article>
+  <article>
+    <h3>克制</h3>
+    <p>留白、边框和文字承担主要表达，色彩只强调关键动作，不用装饰掩盖信息。</p>
+  </article>
+  <article>
+    <h3>无障碍</h3>
+    <p>设计伊始即考虑键盘操作、对比度、页面缩放以及减弱动态效果，而非在发布前进行补偿性修补。</p>
+  </article>
+</div>
+
+## 沿袭自社区徽章的色彩
+
+主蓝色延续原社区徽章的视觉识别，薄荷绿象征开放连接与生机。界面以中性色为主体，品牌色彩秉持克制原则，仅在关键处呈现。
+
+<div class="brand-grid">
+  <ColorSwatch name="Brand Blue" value="#055088" usage="主动作、链接、标志主体" dark />
+  <ColorSwatch name="Ink Navy" value="#0B1F33" usage="正文、深色画布" dark />
+  <ColorSwatch name="Mint" value="#6ADFA3" usage="节点、高亮、成功提示背景" />
+  <ColorSwatch name="Soft Blue" value="#9FC1F9" usage="深色主题链接与辅助图形" />
+</div>
+
+## 组织定位
+
+“重庆理工大学开源计划”是由学生及贡献者维护的非官方开源社区（非营利），不代表重庆理工大学或任何校内机构。设计规范的统一性，不得被误用作暗示学校官方背书。

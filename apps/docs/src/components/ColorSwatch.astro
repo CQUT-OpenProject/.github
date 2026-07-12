@@ -1,0 +1,49 @@
+---
+interface Props {
+  name: string;
+  value: string;
+  usage: string;
+  dark?: boolean;
+}
+const { name, value, usage, dark = false } = Astro.props;
+---
+
+<article class="swatch">
+  <div class="sample" style={`--swatch:${value}`}><span class:list={{ dark }}>{value}</span></div>
+  <div class="copy"><strong>{name}</strong><p>{usage}</p></div>
+</article>
+<style>
+  .swatch {
+    overflow: hidden;
+    border: 1px solid var(--cqut-semantic-color-border-default);
+    border-radius: var(--cqut-radius-card);
+    background: var(--cqut-semantic-color-background-surface);
+  }
+  .sample {
+    display: flex;
+    min-height: 7rem;
+    align-items: flex-end;
+    background: var(--swatch);
+    padding: var(--cqut-space-3);
+  }
+  .sample span {
+    border-radius: var(--cqut-radius-small);
+    background: rgb(255 255 255 / 88%);
+    color: #0b1f33;
+    padding: var(--cqut-space-1) var(--cqut-space-2);
+    font-family: var(--cqut-font-family-mono);
+    font-size: 0.78rem;
+  }
+  .sample span.dark {
+    background: rgb(11 31 51 / 85%);
+    color: white;
+  }
+  .copy {
+    padding: var(--cqut-space-4);
+  }
+  .copy p {
+    margin-top: var(--cqut-space-1);
+    color: var(--cqut-semantic-color-text-secondary);
+    font-size: 0.9rem;
+  }
+</style>

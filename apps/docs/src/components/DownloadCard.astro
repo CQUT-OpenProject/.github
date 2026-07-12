@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  format: string;
+}
+const { title, description, href, format } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const resolved = `${base}${href}`.replace(/\/+/g, '/');
+---
+
+<a class="download" href={resolved} download>
+  <span class="format">{format}</span>
+  <strong>{title}</strong>
+  <span>{description}</span>
+  <span class="action">下载文件 ↓</span>
+</a>
+<style>
+  .download {
+    display: grid;
+    gap: var(--cqut-space-2);
+    border: 1px solid var(--cqut-semantic-color-border-default);
+    border-radius: var(--cqut-radius-card);
+    background: var(--cqut-semantic-color-background-surface);
+    color: var(--cqut-semantic-color-text-primary);
+    padding: var(--cqut-space-4);
+    text-decoration: none;
+    transition: transform var(--cqut-duration-fast);
+  }
+  .download:hover {
+    transform: translateY(-2px);
+    border-color: var(--cqut-semantic-color-action-primary);
+  }
+  .format {
+    width: fit-content;
+    border-radius: var(--cqut-radius-small);
+    background: var(--cqut-semantic-color-background-subtle);
+    color: var(--cqut-semantic-color-text-link);
+    padding: var(--cqut-space-1) var(--cqut-space-2);
+    font-family: var(--cqut-font-family-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  .download > span:not(.format, .action) {
+    color: var(--cqut-semantic-color-text-secondary);
+    font-size: 0.9rem;
+  }
+  .action {
+    color: var(--cqut-semantic-color-text-link);
+    font-weight: 700;
+  }
+</style>

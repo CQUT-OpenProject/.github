@@ -1,0 +1,108 @@
+---
+const base = import.meta.env.BASE_URL;
+const url = (value: string) => `${base}${value}`.replace(/\/+/g, '/');
+---
+
+<h3 class="logo-grid-title">方形标志（用于图标与头像场景）</h3>
+<div class="logo-grid">
+  <figure class="light">
+    <img src={url('downloads/logo/mark-color.svg')} alt="彩色 CQUT-OSP 标志" /><figcaption>
+      彩色主标志
+    </figcaption>
+  </figure>
+  <figure class="neutral">
+    <img src={url('downloads/logo/mark-mono-dark.svg')} alt="深色单色 CQUT-OSP 标志" /><figcaption>
+      深色单色
+    </figcaption>
+  </figure>
+  <figure class="dark">
+    <img src={url('downloads/logo/mark-mono-light.svg')} alt="浅色单色 CQUT-OSP 标志" /><figcaption>
+      浅色单色
+    </figcaption>
+  </figure>
+</div>
+
+<h3 class="logo-grid-title">长条标志（主品牌识别场景）</h3>
+<div class="logo-horizontal-grid">
+  <figure class="light horizontal">
+    <img src={url('downloads/logo/logo-color.svg')} alt="彩色长条标志" /><figcaption>
+      彩色长条
+    </figcaption>
+  </figure>
+  <figure class="neutral horizontal">
+    <img src={url('downloads/logo/logo-mono-dark.svg')} alt="深色单色长条标志" /><figcaption>
+      深色单色长条
+    </figcaption>
+  </figure>
+  <figure class="dark horizontal">
+    <img src={url('downloads/logo/logo-mono-light.svg')} alt="浅色单色长条标志" /><figcaption>
+      浅色单色长条
+    </figcaption>
+  </figure>
+</div>
+
+<style>
+  h3.logo-grid-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: var(--cqut-space-8);
+    margin-bottom: var(--cqut-space-3);
+    border: none;
+    padding: 0;
+  }
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: var(--cqut-space-4);
+    margin-block: var(--cqut-space-4);
+  }
+  .logo-horizontal-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--cqut-space-4);
+    margin-block: var(--cqut-space-4);
+  }
+  @media (min-width: 768px) {
+    .logo-horizontal-grid {
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+  }
+  figure {
+    display: grid;
+    min-height: 15rem;
+    place-items: center;
+    margin: 0;
+    border: 1px solid var(--cqut-semantic-color-border-default);
+    border-radius: var(--cqut-radius-card);
+    padding: var(--cqut-space-6);
+  }
+  figure img {
+    width: 7rem;
+    height: 7rem;
+  }
+  figure.horizontal {
+    min-height: 10rem;
+  }
+  figure.horizontal img {
+    width: 100%;
+    max-width: 16rem;
+    height: auto;
+  }
+  figure.light {
+    background: #fff;
+    color: #0b1f33;
+  }
+  figure.neutral {
+    background: #edf2f6;
+    color: #0b1f33;
+  }
+  figure.dark {
+    background: #071f33;
+    color: #fff;
+  }
+  figcaption {
+    align-self: end;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+</style>

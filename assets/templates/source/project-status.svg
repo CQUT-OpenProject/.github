@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="OpenProject 项目状态卡模板">
+  <rect width="960" height="360" rx="24" fill="#FFFFFF"/>
+  <rect x="1" y="1" width="958" height="358" rx="23" fill="none" stroke="#D7E2EA" stroke-width="2"/>
+  <circle cx="92" cy="90" r="34" fill="#DDF8EB"/>
+  <circle cx="92" cy="90" r="11" fill="#1E714F"/>
+  <text x="152" y="82" fill="#0B1F33" font-family="system-ui, PingFang SC, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">维护中</text>
+  <text x="152" y="120" fill="#526577" font-family="system-ui, PingFang SC, Microsoft YaHei, sans-serif" font-size="22">Maintained · 2026</text>
+  <text x="58" y="224" fill="#0B1F33" font-family="system-ui, PingFang SC, Microsoft YaHei, sans-serif" font-size="44" font-weight="700">项目名称</text>
+  <text x="60" y="276" fill="#526577" font-family="system-ui, PingFang SC, Microsoft YaHei, sans-serif" font-size="24">明确维护状态，避免用户依赖无人维护的软件。</text>
+</svg>

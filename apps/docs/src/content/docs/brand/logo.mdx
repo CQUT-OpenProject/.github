@@ -1,0 +1,61 @@
+---
+title: 标志
+description: CQUT 模块化标志的构成、长条组合、尺寸和背景规则
+---
+
+import LogoShowcase from '../../../components/LogoShowcase.astro';
+import DownloadCard from '../../../components/DownloadCard.astro';
+
+标志将 `C`、`Q`、`U`、`T` 四个字母排布为紧凑的 2×2 模块，确保在独立提取图形使用时仍具备极高的 CQUT 辨识度。Q 右下角的薄荷绿节点取代了传统的尾部线条，不仅完成了字母本身的识别，也象征着开源项目之间的开放连接。统一的圆角单线结构既延续了既有社区徽章的蓝绿经典色彩，又优化了结构细节，以防在低分辨率和小尺寸下丢失细节。
+
+为解决“非官方开源组织”与“纯 CQUT 官方感”之间的身份冲突，我们提供两个版本：
+
+1. **方形标志（未打包）：** 保留为原始的方形结构，仅用于头像、浏览器 Favicon、App 图标等小尺寸图标场景。
+2. **长条标志（带分割线）：** 包含裸标志配以竖分割线，与 `OpenProject` 及非官方声明横向排列，作为组织的主要品牌识别标志。
+
+<LogoShowcase />
+
+## 主版本
+
+彩色版本为首选的默认样式：主体采用 Brand Blue（`#055088`），连接节点采用 Mint（`#6ADFA3`）。核心标志严禁添加渐变、阴影或辅助描边。
+
+单色深色版本适用于浅色、复杂背景或单色印刷；单色浅色版本适用于深蓝色底、黑色背景或深色调照片。禁止在浅色底板上使用纯白版本标志。
+
+## 安全区
+
+安全区取外层圆环笔画宽度，约为标志画布宽度的 `1/8`。其他文本、图标或裁剪边缘均不得侵入此安全边界。方形 App 图标的圆角底板已预留足额留白，无需在应用排版中二次缩小内部图形。
+
+## 最小尺寸
+
+| 用途        | 最小尺寸 | 使用版本       |
+| ----------- | -------: | -------------- |
+| favicon     |    16 px | 彩色主标志     |
+| 导航与按钮  |    24 px | 彩色或单色标志 |
+| GitHub 头像 |    64 px | App 图标版本   |
+
+在 16–23 px 的极小尺寸下，允许隐去薄荷绿节点以保留 C/Q 的核心轮廓。
+
+## 横向签名
+
+网站与推广物料中使用的横向签名，由**带分割线的标志图形**、**英文名称“OpenProject”**与**“重庆理工大学开源计划”**的中文说明组合而成。可编辑模板中的文字部分保留为可编辑文本，以方便贡献者替换特定的项目名称。
+
+<div class="brand-grid">
+  <DownloadCard
+    title="彩色长条标志"
+    description="组织主要品牌标志，含非官方声明"
+    format="SVG"
+    href="downloads/logo/logo-color.svg"
+  />
+  <DownloadCard
+    title="彩色方形标志"
+    description="仅限头像和图标场景，透明背景"
+    format="SVG"
+    href="downloads/logo/mark-color.svg"
+  />
+  <DownloadCard
+    title="方形 App 图标"
+    description="含规范底板和安全区"
+    format="SVG"
+    href="downloads/logo/app-icon.svg"
+  />
+</div>

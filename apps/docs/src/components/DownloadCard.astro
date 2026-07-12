@@ -1,4 +1,6 @@
 ---
+import { withBasePath } from '../base-path';
+
 interface Props {
   title: string;
   description: string;
@@ -7,7 +9,7 @@ interface Props {
 }
 const { title, description, href, format } = Astro.props;
 const base = import.meta.env.BASE_URL;
-const resolved = `${base}${href}`.replace(/\/+/g, '/');
+const resolved = withBasePath(base, href);
 ---
 
 <a class="download" href={resolved} download>

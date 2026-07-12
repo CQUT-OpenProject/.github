@@ -1,6 +1,8 @@
 ---
+import { withBasePath } from '../base-path';
+
 const base = import.meta.env.BASE_URL;
-const url = (value: string) => `${base}${value}`.replace(/\/+/g, '/');
+const url = (value: string) => withBasePath(base, value);
 ---
 
 <h3 class="logo-grid-title">方形标志（用于图标与头像场景）</h3>

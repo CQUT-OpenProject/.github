@@ -1,6 +1,8 @@
 ---
+import { withBasePath } from '../base-path';
+
 const base = import.meta.env.BASE_URL;
-const path = (value: string) => `${base}${value}`.replace(/\/+/g, '/');
+const path = (value: string) => withBasePath(base, value);
 ---
 
 <section class="hero" aria-labelledby="brand-hero-title">

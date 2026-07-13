@@ -14,7 +14,7 @@
 
 ### 加入我们
 
-在 [Issue](https://github.com/CQUT-OpenProject/.github/issues/2) 中提交任意评论以加入组织，加入后可获得仓库管理权限。
+在 [Issue](https://github.com/CQUT-OpenProject/.github/issues/1) 中提交任意评论以加入组织，加入后可获得仓库管理权限。
 
 为防止权限滥用，请求由管理员人工审核。审核通过后，请于 Github 关联邮箱内接受邀请链接。
 

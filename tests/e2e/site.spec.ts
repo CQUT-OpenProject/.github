@@ -14,7 +14,7 @@ for (const path of pages) {
   test(`${path} has no serious accessibility or overflow issues`, async ({ page }) => {
     await page.goto(path);
     await expect(page.locator('main')).toBeVisible();
-    await expect(page).toHaveTitle(/CQUT-OSP Design/);
+    await expect(page).toHaveTitle(/OpenProject Design/);
 
     const overflow = await page.evaluate(
       () => document.documentElement.scrollWidth > document.documentElement.clientWidth,
@@ -96,6 +96,6 @@ test('core content remains readable without JavaScript', async ({ browser }) => 
   const page = await context.newPage();
   await page.goto('/');
   await expect(page.getByRole('heading', { name: /为校园开源项目建立/ })).toBeVisible();
-  await expect(page.getByText(/非官方开源社区/).first()).toBeVisible();
+  await expect(page.getByText(/独立运行的非营利开源社区/).first()).toBeVisible();
   await context.close();
 });

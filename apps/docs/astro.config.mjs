@@ -9,7 +9,7 @@ export default defineConfig({
   base,
   integrations: [
     starlight({
-      title: 'CQUT-OSP Design',
+      title: 'OpenProject Design',
       description: '为校园开源项目建立一致、可信、可访问的视觉语言',
       favicon: '/favicon.svg',
       logo: {

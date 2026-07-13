@@ -1,9 +1,3 @@
-<p align="center">
-  <img src="../.github/assets/logo-mono-light.svg" width="350" alt="Logo">
-</p>
-
-<br>
-
 ## 关于 ｜ 加入我们
 
 > [!IMPORTANT]
@@ -57,3 +51,9 @@
 |  ⚠️  | 必须注明出处、附许可链接、说明是否修改 |
 |  🚫  | 严禁用于商业用途                       |
 |  🔒  | 不得额外添加法律或技术限制             |
+
+---
+
+<p align="center">
+  <img src="../.github/assets/logo-mono-light.svg" width="200" alt="Logo">
+</p>
